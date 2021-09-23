@@ -1,0 +1,34 @@
+package ejercicio01;
+
+import java.util.Scanner;
+
+
+public class Ejercicio01 {
+	
+	public static void main(String[] args) {
+		
+		//EJERCICIO 1: 1.	Leer 7 números y mostrarlos en el mismo orden introducido
+		Scanner teclado = new Scanner(System.in);
+		
+		int[] vc = {0,0,0,0,0,0,0};
+		int num; int cont = 0; int i=0;
+		while(cont <7) {
+			System.out.println("Introduce número: ");
+			num = teclado.nextInt();
+			cont++;
+			vc[i] = num;
+			i++;
+		}
+		
+		teclado.close();
+		
+		for(int j : vc) {
+			System.out.println(j);
+		}
+		
+		
+		
+
+	}
+
+}
