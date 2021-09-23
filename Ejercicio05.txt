@@ -1,0 +1,48 @@
+package ejercicio05;
+
+import java.util.Scanner;
+
+public class Ejercicio05 {
+
+	public static void main(String[] args) {
+		
+		//EJERCICIO 5: Queremos desarrollar una aplicación que nos ayude a gestionar las notas de un centro educativo. Cada grupo
+		//(o clase) está compuesto por 5 alumnos. Se pide leer las notas del primer, segundo y tercer trimestre de un
+		//grupo. Debemos mostrar al final: la nota media del grupo en cada trimestre, y la media del alumno que se encuentra en la posición N (N se lee por teclado).
+
+		
+		Scanner teclado = new Scanner(System.in);
+		
+		//5 alumnos (filas)   3 trim (columnas)
+		float[][] notas = new float[5][3];
+		float notaAl;
+		
+		//int dimen=notas.length;
+		//System.out.println(dimen);
+		
+		for (int i=0; i<notas.length; i++) {
+			for (int j=0; j<notas[0].length; j++) {
+				System.out.println("Nota alumno " + (i+1) + " en el trimestre " + (j+1));
+				notaAl = teclado.nextFloat();
+				notas[i][j] = notaAl;
+			}
+		}
+		
+		teclado.close();
+		
+		float[] media = new float[3];
+				
+		for(int j = 0; j<notas[0].length; j++) {
+			float suma=0f;
+			for(int i = 0; i<notas.length; i++) {
+				suma = suma + notas[i][j];
+			}
+			media[j] = (suma/5);
+		}
+		
+		for(int i=0; i<media.length; i++)
+			System.out.println(media[i]);
+			
+
+}
+}

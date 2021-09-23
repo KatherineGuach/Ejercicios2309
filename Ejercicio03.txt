@@ -1,0 +1,36 @@
+package ejercicio03;
+
+import java.util.Scanner;
+
+public class Ejercicio03 {
+
+	public static void main(String[] args) {
+		
+		//EJERCICIO 3: Leer 10 números enteros. Debemos mostrarlos en el siguiente orden:
+		//el primero, el último, el segundo, el penúltimo, el tercero, etc.
+		Scanner teclado = new Scanner(System.in);
+		
+		int[] vc = {0,0,0,0,0,0,0,0,0,0};
+		int num; int cont = 0; int i=0;
+		while(cont < 10) {
+			System.out.println("Introduce número entero: ");
+			num = teclado.nextInt();
+			cont++;
+			vc[i] = num;
+			i++;
+		}
+		
+		int mitad=vc.length/2;
+		//System.out.println(mitad);
+		
+		for(int j=0; j < mitad; j++) {
+			System.out.println(vc[j]);
+			System.out.println(vc[9-j]);
+		}
+		
+		teclado.close();
+
+
+	}
+
+}

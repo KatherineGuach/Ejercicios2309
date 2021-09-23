@@ -1,0 +1,31 @@
+package ejercicio02;
+
+import java.util.Scanner;
+
+public class Ejercicio02 {
+
+	public static void main(String[] args) {
+		// TODO Esbozo de método generado automáticamente
+		
+		//EJERCICIO 2: Leer 7 números y mostrarlos en orden inverso al introducido.
+		Scanner teclado = new Scanner(System.in);
+
+		int[] vc = {0,0,0,0,0,0,0};
+		int num; int cont = 0; int i=0;
+		while(cont <7) {
+			System.out.println("Introduce número: ");
+			num = teclado.nextInt();
+			cont++;
+			vc[i] = num;
+			i++;
+		}
+
+		for(int j=0; j < vc.length; j++) {
+			System.out.println(vc[6-j]);
+		}
+		
+		teclado.close();
+
+	}
+
+}
